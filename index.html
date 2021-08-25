@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head>
+    <title>Twitch Streamer Status</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Follow your favorite streamers and see who is live right now. A freeCodeCamp project.">
+    <meta name="keywords" content="Twitch, freeCodeCamp, fCC, programming, project,">
+    <meta name="author" content="Lee Vaughn">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-header">
+        <header class="main-header">
+            <img class="twitch-logo" src="https://regularlyscheduledprogrammingblog.files.wordpress.com/2018/01/twitch-logo.png">
+        </header>
+    </div>
+
+    <div class="container-status">
+        <ul id="status">
+            <li id="all" class="active">All</li>
+            <li id="online">Online</li>
+            <li id="offline">Offline</li>
+        </ul>
+    </div>
+
+    <div class="container-streamers">
+        <div id="streamers">
+            <ul id="names">
+            </ul>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

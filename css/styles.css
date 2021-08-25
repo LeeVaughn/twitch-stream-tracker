@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #3c2860;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #3c2860;
+    text-decoration: none;
+}
+
+.container-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.main-header {
+    text-align: center;
+}
+
+.twitch-logo {
+    margin: 1.25rem auto;
+    width: 80%;
+    max-width: 400px;
+}
+
+.container-status {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-streamers,
+.container-search {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name {
+    margin-bottom: 0.625rem;
+    border-radius: 5px;
+}
+
+.on {
+    background: #80f29b;
+}
+
+.on:hover {
+    background: rgba(128, 242, 155, .8);
+}
+
+.off {
+    background: #fc85ae;
+}
+
+.off:hover {
+    background: rgba(252, 133, 174, .8);
+}
+
+.logo {
+    width: 50px;
+    border-radius: 50%;
+    margin: 0.625rem 1.25rem;
+}
+
+.displayName,
+.game,
+.topic {
+    margin: 0 auto;
+    padding: 0 0.9375rem 0.625rem 0.9375rem;
+}
+
+#status,
+#names {
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#status {
+    width: 80%;
+}
+
+#status:hover {
+    cursor: pointer;
+}
+
+#all,
+#online,
+#offline {
+    border: 2px solid #6441a4;
+    border-radius: 5px;
+    margin: 0.625rem auto;
+    padding: 0.3125rem 1.25rem;
+    font-size: 1.25rem;
+}
+
+#all.active,
+#online.active,
+#offline.active {
+    color: #fff;
+    background: #6441a4;
+}
+
+#streamers {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#names {
+    border: 2px solid #6441a4;
+    border-radius: 5px;
+    margin: 1.25rem auto 1.875rem auto;
+    padding: 0.625rem 0.625rem 0 0.625rem;
+}
+
+@media (min-width: 960px) {
+    .twitch-logo {
+        margin: 1.25rem auto 0.625rem auto;
+    }
+    .logo {
+        width: 60px;
+    }
+    #status {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #status li {
+        width: 31.5%;
+    }
+    #status,
+    #streamers {
+        width: 70%;
+        max-width: 800px;
+    }
+    #all {
+        margin-left: 0;
+    }
+    #offline {
+        margin-right: 0;
+    }
+    #names {
+        margin: 0.625rem auto 1.25rem auto;
+    }
+}
