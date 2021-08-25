@@ -4,7 +4,7 @@ This front-end application tracks Twitch streamers and displays which of them ar
 
 ## Motivation
 
-This is an updated version of a project that was originally build as part of the freeCodeCamp Front End Development Certification. It is largely the same but updated to work with the current version of the Twitch API.
+This is an updated version of a project that was originally build as part of the freeCodeCamp Front End Development Certification. It is largely the same but updated to work with the current version of the Twitch API and the FCC workaround.
 
 ## Features
 
@@ -22,11 +22,12 @@ This is an updated version of a project that was originally build as part of the
 
 - [Twitch API](https://dev.twitch.tv/docs/v5/reference/streams/#get-stream-by-user)
 - [API Key Workaround](https://wind-bow.glitch.me/)
+- [Updated API Key Workaround](https://twitch-proxy.freecodecamp.rocks/)
 
 ## Links
 
-- [Live Demo](https://leevaughn.github.io/twitchtv-api/)
-- [Repository](https://github.com/LeeVaughn/twitchtv-api)
+- [Live Demo](https://leevaughn.github.io/twitch-stream-tracker/)
+- [Repository](https://github.com/LeeVaughn/twitch-stream-tracker)
 
 ## Author
 
