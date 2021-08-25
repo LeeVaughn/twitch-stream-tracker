@@ -1,34 +1,30 @@
-const names = ["freecodecamp", "csharpfritz", "blizzheroes", "noopkat", "noobs2ninjas", "vtriple", "supremerumham", "sheriffjackson", "jesseskinner", "esl_sc2", "dunktrain"];
-let displayName, logo;
+const names = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
+let logo;
 
 names.forEach((name) => {
-    const channelAPI = `https://wind-bow.gomix.me/twitch-api/channels/${name}?callback=?`;
-    const streamAPI = `https://wind-bow.gomix.me/twitch-api/streams/${name}?callback=?`;
+    // the first request gets information on the streamer, the second gets information on the stream
+    const channelAPI = `https://twitch-proxy.freecodecamp.rocks/twitch-api/channels/${name}?callback=?`;
+    const streamAPI = `https://twitch-proxy.freecodecamp.rocks/twitch-api/streams/${name}?callback=?`;
 
     $.getJSON(channelAPI, function (channel) {
         $.getJSON(streamAPI, function (stream) {
-
-            // There are two different display_name related variables to handle accounts like "blizzheroes"
-            // that have special characters in their display_name
-            displayName = channel.display_name;
-            displayNameRegex = displayName.replace(/[^A-Z0-9_]/ig, "");
             logo = `<img src="${channel.logo}" class="logo">`;
 
             if (stream.stream != null) {
                 $("#names").prepend(`
-                    <div class="name on" id="${displayNameRegex}">
-                        <a href="//twitch.tv/${name}" target="_blank">${logo}
-                            <h2 class="displayName">${displayName}</h2>
-                            <div class="game">Currrently streaming <strong>${stream.stream.channel.game}</strong> for ${stream.stream.viewers} viewers.</div>
+                    <div class="name on" id="${channel.display_name}">
+                        <a href="https://twitch.tv/${name}" target="_blank">${logo}
+                            <h2 class="channel.display_name">${channel.display_name}</h2>
+                            <div class="game">Currently streaming <strong>${stream.stream.channel.game}</strong> for ${stream.stream.viewers} viewers.</div>
                             <div class="topic"><em>${stream.stream.channel.status}</em></div>
                         </a>
                     </div>
                 `);
             } else {
                 $("#names").append(`
-                    <div class="name off" id="${displayNameRegex}">
+                    <div class="name off" id="${channel.display_name}">
                         <a href="//twitch.tv/${name}" target="_blank">${logo}
-                        <h2 class="displayName">${displayName}</h2>
+                        <h2 class="channel.display_name">${channel.display_name}</h2>
                         </a>
                     </div>
                 `);
